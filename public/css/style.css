@@ -1,0 +1,817 @@
+/*Generals Options*/
+@viewport{
+    zoom: 1.0;
+    width: extend-to-zoom;
+}
+@-ms-viewport{
+    width: extend-to-zoom;
+    zoom: 1.0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Navbar styles - section1*/
+#section1 {
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    /*background-position: 50% 0%;*/
+    background-repeat: no-repeat;
+    /*background-color: #000;*/
+    background-image: url(../imgs/inicial.png);
+}
+
+#logo {
+    position: relative;
+    top: -9.6rem;
+    left: 1rem;   
+}
+#formaCatalogo{
+    position: relative;
+    top: -9.8rem;
+    left: 0.7rem;
+}
+#catalogo {
+    color: white;
+    font-size: 1.7rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    top: -10.3rem;
+    left: -0rem;
+    border: white 1px solid;
+    border-radius: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 2px;
+    text-decoration: none;
+}
+#catalogo:hover {
+    color:  black;
+    background-color: white;
+}
+#nombre {
+    position: relative;
+    top: -11rem;
+    left: 30%;
+}
+#buscarIcon {
+    position: relative;
+    top: -9.5rem;
+    left: 60%;
+}
+buscarIcon:hover {
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+}
+#separador {
+    color: white;
+    font-size: 2.3rem;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    top: -10.3rem;
+    left: 60%;
+}
+#entrar {
+    color: white;
+    font-size: 29px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    top: -10.25rem;
+    left: 60%;
+    border: white 1px solid;
+    border-radius: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 2px;
+    text-decoration: none;
+}
+#entrar:hover {
+    color:  black;
+    background-color: white;
+}
+#titulo {
+    font-size: 2.5rem;
+    text-align: center;
+    color: white;
+    position: relative;
+    top: -2rem;
+}
+#playIcon {
+    position: relative;
+    left: 40rem;
+}
+#registrarse {
+    color:white;
+    font-size: 36px;
+    border: white 1px solid;
+    border-radius: 15px;
+    position: relative;
+    padding-left: 100px;
+    padding-right: 100px; 
+    padding-bottom: 14px;  
+    top: 1.5rem;
+    left: 30.6rem;
+    text-decoration: none;
+  
+}
+#registrarse:hover {
+    background-color: white;
+    color: black;
+}
+#correo {
+    position: relative;
+    top:2.2rem;
+    left: 8rem;
+}
+#notaRegistro {
+    color: white;
+    position: relative;
+    top: 2.6rem;
+    left: 10.6rem;
+}
+/*Tipos de libros - Section2*/
+#textTematicas {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    top: -4rem;
+}
+#tiposCat {
+    color: white;
+}
+#tiposCat {
+    text-align: center;
+}
+#tiposCat li {
+    display: inline;
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-seri;
+    font-size: 1.5rem;
+    position: relative;
+    top: -2rem;    
+}
+#tiposCat li a{
+    color: white;
+    text-decoration: none;  
+}
+#tiposCat li:before {
+    content: "|"
+}
+#imgLibros {
+    position: relative;
+    top: 50rem;
+    left: 24%;
+    height: auto;
+    width: 53%;
+}
+/*Conocenos - Seccion3*/
+#editorial{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    top: -2.5rem;
+}
+#studentIcon{
+    position: relative;
+    top: 1rem;
+    left: 30%;
+    cursor: pointer;
+}
+#bookIcon{
+    position: relative;
+    top: 1rem;
+    left: 37%;
+    cursor: pointer;
+}
+#telemIcon{
+    position: relative;
+    top: 1rem;
+    left: 44%;
+    cursor: pointer;
+    
+}
+#truckIcon{
+    position: relative;
+    top: 1rem;
+    left: 49%;
+    cursor: pointer;
+}
+#textos{
+    position: relative;
+    top:9%;
+}
+#textApoyamos {
+    color: #000099;
+    text-align: center;
+    font-size: 1.6rem;
+    padding-left: 20%;
+    padding-right: 20%;
+    margin-bottom: 10px;
+}
+#textCalidad {
+    color: #990033;
+    text-align: center;
+    font-size: 1.6rem;
+    padding-left: 20%;
+    padding-right: 20%;
+    margin-bottom: 10px;
+}
+#textSugerencia {
+    color: #006600;
+    text-align: center;
+    font-size: 1.6rem;
+    padding-left: 20%;
+    padding-right: 20%;
+    margin-bottom: 10px;
+}
+#textEntrega {
+    color: #663300;
+    text-align: center;
+    font-size: 1.6rem;
+    padding-left: 20%;
+    padding-right: 20%;
+    margin-bottom: 10px;
+}
+/*Footer styles - section4*/
+#finalMsg {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 1px;
+    font-size: 32px;
+    text-align: center;
+    position: relative;
+    top: -160px;
+}
+#textPregunta {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 19px;
+    text-align: center;
+    position: relative;
+    top: -140px;
+    left: 0%;
+}
+#contactoModal {
+    color: white;
+    font-size: 18px;
+    border: white solid 1px;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    top: -90px;
+    left: 37%; 
+    text-decoration: none;
+}
+#contactoModal:hover {
+    color: black;
+    background-color: white;
+}
+#copyr {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    top: 190px;
+    left: 1%;
+}
+#derechos {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    top: 190px;
+    left: 62%;
+}
+#faceIcon {
+    position: relative;
+    top: -20px;
+    left: 30%;
+}
+#twitterIcon {
+    position: relative;
+    top: -20px;
+    left: 37%;
+    width: 62px;
+    height: 60px;
+}
+@media (max-width: 1280px) {
+     #finalMsg {
+       color: white;
+       letter-spacing: 0px;
+       font-size: 2rem;
+       top: -12rem;
+    }
+    #textPregunta {
+        font-size: 19px;
+        text-align: center;
+        position: relative;
+        top: -10rem;
+        left: 0%;
+    }
+    #contactoModal {
+        font-size: 18px;
+        border: white solid 1px;
+        border-radius: 10px;
+        padding-left: 35px;
+        padding-right: 35px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        position: relative;
+        top: -6rem;
+        left: 36.5%; 
+    }
+    #copyr {
+        top: 14rem;
+        left: 1%;
+    }
+    #derechos {
+        top: 14rem;
+        left: 59.5%;
+    }
+    #faceIcon {
+        position: relative;
+        top: -1rem;
+        left: 28%;
+    }
+    #twitterIcon {
+        position: relative;
+        top: -1rem;
+        left: 37%;
+        width: 62px;
+        height: 60px;
+    }
+}
+@media (max-width: 1024px) {
+   /*Navbar styles - section1*/
+    #logo {
+        top: -150px;
+        left: 1%;   
+    }
+    #formaCatalogo{
+        top: -153px;
+        left: 0.6%;
+    }
+    #nombre {
+        top: -170px;
+        left: 25%;
+    }
+    #catalogo {
+        top: -161px;
+        left: -0.4%;
+    }
+    #buscarIcon {
+        top: -150px;
+        left: 49%;
+    }
+    #separador {
+        top: -163px;
+        left: 49%;
+    }
+    #entrar {
+        top: -161px;
+        left: 49%;
+    }
+    #playIcon {
+        position: relative;
+        left: 45%;
+    }
+    #registrarse {
+        top: 24px;
+        left: 31%;
+    }
+    #correo {
+        position: relative;
+        top:34px;
+        left: -4.4%;
+    }
+    #notaRegistro {
+        top: 42px;
+        left: -0.2%;
+    }
+    #textApoyamos {
+         font-size: 1.2rem;
+    }
+    #textCalidad {
+        font-size: 1.2rem;
+    }
+    #textSugerencia {
+        font-size: 1.2rem;
+    }
+    #textEntrega {
+        font-size: 1.2rem;
+    }
+    /*Footer styles - section4*/
+    #finalMsg {
+       color: white;
+       letter-spacing: 0px;
+       font-size: 2rem;
+       top: -12rem;
+    }
+    #textPregunta {
+        font-size: 19px;
+        text-align: center;
+        position: relative;
+        top: -10rem;
+        left: 0%;
+    }
+    #contactoModal {
+        font-size: 18px;
+        border: white solid 1px;
+        border-radius: 10px;
+        padding-left: 35px;
+        padding-right: 35px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        position: relative;
+        top: -6rem;
+        left: 33%; 
+    }
+    #copyr {
+        top: 14rem;
+        left: 1%;
+    }
+    #derechos {
+        top: 14rem;
+        left: 50%;
+    }
+    #faceIcon {
+        position: relative;
+        top: -1rem;
+        left: 23%;
+    }
+    #twitterIcon {
+        position: relative;
+        top: -rem;
+        left: 33%;
+        width: 62px;
+        height: 60px;
+    }
+}
+
+@media (max-height: 600px) {
+   /*Navbar styles - section1*/
+    #logo {
+        top: -6rem;
+        left: 1rem;   
+    }
+    #formaCatalogo{
+        top: -6.2rem;
+        left: 0.7rem;
+    }
+    #nombre {
+        top: -7.5rem;
+        left: 25%;
+    }
+    #catalogo {
+        top: -6.7rem;
+        left: 0rem;
+    }
+    #buscarIcon {
+        top: -6rem;
+        left: 50%;
+    }
+    #separador {
+        top: -6.9rem;
+        left: 50%;
+    }
+    #entrar {
+        top: -6.7rem;
+        left: 50%;
+    }
+    #textApoyamos {
+         font-size: 1.3rem;
+    }
+    #textCalidad {
+        font-size: 1.3rem;
+    }
+    #textSugerencia {
+        font-size: 1.3rem;
+    }
+    #textEntrega {
+        font-size: 1.3rem;
+    }
+    /*Footer styles - section4*/
+
+    #contactoModal {
+        left: 33%; 
+    }
+    #copyr {
+        top: 9.5rem;
+        left: 1%;
+    }
+    #derechos {
+       top: 9.5rem;
+       left: 50%;
+    }
+    #faceIcon {
+        top: 0rem;
+        left: 22%;
+    }
+    #twitterIcon {
+        top: 0rem;
+        left: 35%;
+    }
+
+}
+
+@media (max-width: 800px) and (max-height: 600px) {
+    #formaCatalogo{
+        top: -6.2rem;
+        left: 1.5%;
+    }
+    #nombre {
+        top: -7.5rem;
+        left: 18%;
+    }
+    #catalogo {
+        top: -6.7rem;
+        left: 0%;
+    }
+    #buscarIcon {
+        top: -6.1rem;
+        left: 35%;
+    }
+    #separador {
+        top: -6.9rem;
+        left: 35%;
+    }
+    #entrar {
+        top: -6.7rem;
+        left: 35%;
+    }
+    #titulo {
+        font-size: 1.8rem;
+    }
+    #playIcon {
+        position: relative;
+        left: 45%;
+    }
+    #registrarse {
+        top: 24px;
+        left: 26%;
+    }
+    #correo {
+        position: relative;
+        top:34px;
+        left: -20%;
+    }
+    #notaRegistro {
+        top: 42px;
+        left: -14%;
+    }
+    /*Footer styles - section4*/
+    #finalMsg {
+       color: white;
+       letter-spacing: 0px;
+       font-size: 28px;
+       top: -150px;
+    }
+    #textPregunta {
+        font-size: 19px;
+        text-align: center;
+        position: relative;
+        top: -120px;
+        left: 0%;
+    }
+    #textApoyamos {
+         font-size: 1rem;
+    }
+    #textCalidad {
+        font-size: 1rem;
+    }
+    #textSugerencia {
+        font-size: 1rem;
+    }
+    #textEntrega {
+        font-size: 1rem;
+    }
+    #studentIcon{
+        position: relative;
+        top: 1rem;
+        left: 20%;
+    }
+    #bookIcon{
+        position: relative;
+        top: 1rem;
+        left: 28%
+    }
+    #telemIcon{
+        position: relative;
+        top: 1rem;
+        left: 37%;
+        
+    }
+    #truckIcon{
+        position: relative;
+        top: 1rem;
+        left: 43%;
+    }
+    /*Footer styles - section4*/
+
+    #contactoModal {
+        top: -4rem;
+        left: 29%; 
+    }
+    #copyr {
+        top: 9.5rem;
+        left: 1%;
+    }
+    #derechos {
+       top: 9.5rem;
+       left: 35.7%;
+    }
+    #faceIcon {
+        top: 0rem;
+        left: 14%;
+    }
+    #twitterIcon {
+        top: 0rem;
+        left: 30%;
+    }
+}
+/* Navigaton bullets styles
+ * --------------------------------------- */
+ #pp-nav li .active span, .pp-slidesNav .active span {
+    background: #bbb;
+}
+#pp-nav span, .pp-slidesNav span {
+    border-color: #bbb !important;
+}
+
+ /*Arrow*/
+ #arrow {
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    cursor: pointer;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border: 0;
+    outline: 0;
+    z-index: 100;
+    color: #BBB;
+    background: transparent;
+    -moz-transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
+    -o-transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
+    -webkit-transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
+    transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
+    font: 18px Heiti, 'Lucida Grande', Arial;
+    font-weight: bold;
+}
+#arrow span {
+    display: inline-block;
+    position: relative;
+    top: -10px;
+    -moz-transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
+    -o-transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
+    -webkit-transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
+    transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
+}
+#arrow:hover {
+    background: #FF4081;
+}
+#arrow:hover span {
+    top: 2px;
+    color: #FFF;
+}
+
+/* ===========================================================
+ * pagepiling.js 1.5
+ *
+ * https://github.com/alvarotrigo/fullPage.js
+ * MIT licensed
+ *
+ * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
+ *
+ * ========================================================== */
+html, body {
+    overflow:hidden;
+    margin:0;
+    padding:0;
+
+    /*Avoid flicker on slides transitions for mobile phones #336 */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.pp-section {
+    height:100%;
+    position:absolute;
+    width:100%;
+}
+.pp-easing {
+    -webkit-transition: all 1000ms cubic-bezier(0.550, 0.085, 0.000, 0.990);
+    -moz-transition: all 1000ms cubic-bezier(0.550, 0.085, 0.000, 0.990);
+    -o-transition: all 1000ms cubic-bezier(0.550, 0.085, 0.000, 0.990);
+    transition: all 1000ms cubic-bezier(0.550, 0.085, 0.000, 0.990);
+    /* custom */
+    -webkit-transition-timing-function: cubic-bezier(0.550, 0.085, 0.000, 0.990);
+    -moz-transition-timing-function: cubic-bezier(0.550, 0.085, 0.000, 0.990);
+    -o-transition-timing-function: cubic-bezier(0.550, 0.085, 0.000, 0.990);
+    transition-timing-function: cubic-bezier(0.550, 0.085, 0.000, 0.990);
+    /* custom */
+}
+#pp-nav {
+    position: fixed;
+    z-index: 100;
+    margin-top: -32px;
+    top: 50%;
+    opacity: 1;
+}
+#pp-nav.right {
+    right: 17px;
+}
+#pp-nav.left {
+    left: 17px;
+}
+.pp-section.pp-table{
+    display: table;
+}
+.pp-tableCell {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+}
+.pp-slidesNav{
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    opacity: 1;
+}
+.pp-slidesNav.bottom {
+    bottom: 17px;
+}
+.pp-slidesNav.top {
+    top: 17px;
+}
+#pp-nav ul,
+.pp-slidesNav ul {
+  margin: 0;
+  padding: 0;
+}
+#pp-nav li,
+.pp-slidesNav li {
+    display: block;
+    width: 14px;
+    height: 13px;
+    margin: 7px;
+    position:relative;
+}
+.pp-slidesNav li {
+    display: inline-block;
+}
+#pp-nav li a,
+.pp-slidesNav li a {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+}
+#pp-nav li .active span,
+.pp-slidesNav .active span {
+    background: #FFF;
+}
+#pp-nav span,
+.pp-slidesNav span {
+    top: 2px;
+    left: 2px;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #000;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+}
+.pp-tooltip {
+    position: absolute;
+    top: -2px;
+    /*color de puntos*/
+    color: #fff; 
+    font-size: 14px;
+    font-family: arial, helvetica, sans-serif;
+    white-space: nowrap;
+    max-width: 220px;
+}
+.pp-tooltip.right {
+    right: 20px;
+}
+.pp-tooltip.left {
+    left: 20px;
+}
+.pp-scrollable{
+    overflow-y: scroll;
+    height: 100%;
+}

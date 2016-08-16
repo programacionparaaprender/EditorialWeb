@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="4" height="34" viewBox="0 0 4 34">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        font-size: 36px;
+      }
+
+      .cls-2 {
+        fill: #fefdfc;
+        text-anchor: middle;
+        font-family: "Myriad Pro";
+      }
+    </style>
+  </defs>
+  <text x="2" y="25" class="cls-1"><tspan x="2" class="cls-2">|</tspan></text>
+</svg>

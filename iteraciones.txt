@@ -1,0 +1,304 @@
+Iteración Número 1
+Creación del proyecto
+composer create-project laravel/laravel=5.2 EditorialWeb
+otra forma
+composer create-project --prefer-dist laravel/laravel EditorialWeb
+
+Iteración Número 2
+php artisan app:name EditorialWeb
+
+Iteración Número 3
+Creación de las tablas de la base de datos
+//todas estas tablas se agregan en el orden en que fueron creadas
+//asi que hay que tener cuidado de quienes deben crearse primero que otras
+php artisan make:migration --create="estadopedidos" CrearTablaEstadoPedidos
+php artisan make:migration --create="autores" CrearTablaAutores
+php artisan make:migration --create="tipoediciones" CrearTablaTipoEdiciones
+php artisan make:migration --create="generos" CrearTablaGeneros
+php artisan make:migration --create="niveles" CrearTablaNiveles
+php artisan make:migration --create="libros" CrearTablaLibros
+php artisan make:migration --create="libroautores" CrearTablaLibroAutores
+php artisan make:migration --create="empleados" CrearTablaEmpleados
+php artisan make:migration --create="representantes" CrearTablaRepresentantes
+php artisan make:migration --create="pedidos" CrearTablaPedidos
+php artisan make:migration --create="lineas" CrearTablaLineas
+luego de agregar el código interno ejecutamos el comando
+php artisan migrate
+//no funcionara si usas esta linea en algun controlador
+//use Illuminate\Http\Request;
+
+Iteración Número 4 (Debe hacerse primero que la 3 por que tambien te genera las tablas)
+php artisan make:model Autor
+php artisan make:model TipoEdicion
+php artisan make:model Genero
+php artisan make:model Nivel
+php artisan make:model Libro
+php artisan make:model LibroAutor
+php artisan make:model Empleado
+php artisan make:model Representante //deben extender de lo mismo que extiende User
+php artisan make:model EstadoPedido
+php artisan make:model Pedido
+php artisan make:model Linea
+
+Iteración Número 5  llenamos la base de datos con los seeders
+Creamos los seeders manualmente no se pueden crear por comandos en laravel 5.0
+luego
+composer dumpautoload
+php artisan db:seed
+
+Iteración Número 6 Creando los controladores de la aplicación
+php artisan make:controller AutorController
+php artisan make:controller TipoEdicionController
+php artisan make:controller GeneroController
+php artisan make:controller NivelController
+php artisan make:controller LibroController
+php artisan make:controller LibroAutorController
+php artisan make:controller EmpleadoController
+php artisan make:controller PedidoController
+php artisan make:controller LineaController
+
+solo estoy trabajando en el codigo de estos
+php artisan make:controller RepresentanteController
+php artisan make:controller BienvenidaController
+php artisan make:controller InicioController
+php artisan make:controller ValidacionController
+
+Iteración Número 7 Creando las rutas (por ahora solo estas)
+Route::controllers([
+	'validacion' => 'Validacion\ValidacionController',
+	'validado/representante' => 'RepresentanteController',
+	'validado' => 'InicioController',
+	'/' => 'BienvenidaController'
+]);
+
+Iteración Número 8 Modificando los middleware
+Authenticate.php
+RedirectIfAuthenticated.php
+
+Iteración Número 9 las vistas
+modificamos el archivo app.blade.php y lo llamamos appli.blade.php por si lo necesitamos luego
+creamos el archivo app.blade.php
+creamos el archivo bienvenida.blade.php
+creamos el archivo inicio.blade.php
+creamos la carpeta validación dentro de la carpeta views, dentro de la carpeta validación creamos los archivos
+inicio.blade.php
+recuperar.blade.php
+registro.blade.php
+
+Iteración Número 10 las excepciones
+modificamos el archivo que esta en app\Exceptions se llama Handler.php
+
+Iteración Numero 11 los Registrar.php, ValidacionController.php, auth.php, inicio.blade.php de carpeta validacion
+config/auth.php
+app/Http/Controllers/Validacion/ValidacionController.php
+resources/views/inicio.blade.php
+estudiado el archivo 11 de los txt
+
+Iteración Número 12 Creando los request.
+estudiado el archivo 12 de los txt
+php artisan make:request IniciarSesionRequest //luego editar el postInicio de ValidacionController.php
+estudiando el archivo 13 de los txt
+php artisan make:request RecuperarContrasenaRequest //luego editar el postRecuperar de ValidacionController.php
+estudianto el archivo 14 de los txt
+php artisan make:request EditarPerfilRequest //luego editar el postEditarPerfil y getEditarPerfil
+
+Iteración Numero 13 Editando las vistas con diccionarios
+estudiando el archivo 13 de los txt
+Editamos validacion/inicio.blade.php y agregamos la linea del diccionario recuperada
+estudiando el archivo 14 de los txt
+Editamos el archivo app.blade.php
+Creamos los archivos
+mostrar-libros.blade.php
+edit.blade.php
+creamos sus nuevas rutas
+dentro de la carpeta libros
+falta el archivo txt número 15
+
+Iteración Número 14 Empezamos con el carrito de compra
+php artisan make:controller CarritoController
+creamos la vista mostrar-carrito.blade.php agregamos el codigo al route.php
+
+Iteración Número 15 Empezamos con el primer request
+empezamos con el post de compra
+php artisan make:request AnadirCarritoRequest
+terminado carrito de compra
+tambien terminado el vaciar carrito de compra
+terminado el procesar compra
+
+Iteración Número 16 Empezamos con los reportes
+php artisan make:controller ReporteController
+archivos con los que trabaje
+route.php
+views/reportes/masvendido.blade.php
+app.blade.php
+
+Iteración Número 17 Trabajando las sesiones representantes y administrador
+terminado
+trabajado las migraciones y los seeders luego el app.blade.php, mostrar-libros.blade.php
+
+Iteración Número 18 Trabajando la gestión de los libros
+terminando crear los libros
+php artisan make:request CrearLibroRequest
+php artisan make:request ActualizarLibroRequest
+
+Iteración 20: terminando gestión libros y pedidos
+php artisan make:request ActualizarPedidoRequest
+
+Iteraci�n 21: eliminando todo lo que referencia a empleados
+listo
+Iteraci�n 22: actualizando a laravel 5.1
+listo
+Iteraci�n 23: impreci�n en pdf de factura
+listo falta mejorar calidad del pdf
+Iteraci�n 24: mejorar calidad visual de la pagina
+
+Iteración 24: Integrando bienvenida de Christian Yanez
+cree el archivo bienvenidachris.blade.php y agregue su código he hice algunas
+modificaciones
+
+Iteración 25: Agregando cuadro de busqueda a la pagina
+php artisan make:controller BusquedaController
+php artisan make:request BusquedaLibroRequest
+terminado
+
+Iteración 26: Creado proyecto laravel 5.1
+y reemplazado con código de laravel 5.0
+completamente funcional corregido cualquier error
+
+Iteración 27: Utilizando los factories
+Creando el factory para Libro para que genere 100 campos aleatorios
+despues de definidos los mios
+
+Creando el factory para Empleados para que genere 100 campos aleatorios
+despues de definir los mios
+php artisan migrate:refresh --seed
+
+
+Iteración 28: Realizando la paginación de libros
+antes del endsection del blade usamos {!!$libros->render() !!}
+y en el controller $libros = Libro::paginate();
+
+Iteración 29: Realizando pruebas de integración
+realizamos los códigos en tests
+php artisan make:test MostraLibroTest
+php artisan make:test CrearLibroTest
+php artisan make:test BienvenidaTest
+php artisan make:test ValidacionRegistro
+
+ejecutamos el comando
+vendor\bin\phpunit
+
+Iteracion 30: Envio de correo electronico
+.env
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=libreriaomega3@gmail.com
+MAIL_PASSWORD=libreriaomega3machlu
+MAIL_ENCRYPTION=tls
+
+php artisan make:controller EmailController
+agregar código y permitir uso de cuenta en
+para gmail
+https://www.google.com/settings/security/lesssecureapps
+
+se coloca en el CarritoController el código comentado para que no arroje
+problemas
+
+Iteración 31: Vista de pedidos para un representante
+creamos la vista compra.blade.php dentro de la carpeta representante
+terminada con fecha y todo
+
+Iteración 32: Notificando al administrador sobre pago del pedido
+creamos el boton de notificar pago pedido
+pedidos.notificar
+luego crear los metodos en PedidoController
+getNotificar
+postNotificar
+creamos el request
+php artisan make:request NotificarPedidoRequest
+creamos la vista emails.notificacion.blade.php
+funciona perfectamente
+
+Iteración 33: Separar pedidos por estados
+agregar estado aprobado
+despues
+php artisan migrate:refresh --seed
+terminado los estadopedidos
+1 EnEspera
+2 Pagado
+3 Enviado
+4 Devuelto
+5 Aprobado
+
+Iteración 34: Registrando empleados
+vista empleados.registrar
+no requiere ingresar una escuela ni tampoco un nivel
+creamos los metodos en InicioController
+creamos el enlace en app.blade.php
+
+Iteración 35: Roles de los diferentes usuarios
+Podremos editar el rol que cumplen los representantes
+crearemos la vista representante.roles
+creamos los controladores de rol
+creamos el enlace en app.blade.php
+creamos el php artisan make:request CambioRolRequest
+terminado
+0 representante
+1 administrador
+2 empleado
+3 deshabilitado
+Iteración 36: mejorando registro de usuarios
+php artisan make:request RegistroRequest
+
+Iteración 36: Vistas de libros por genero
+composer dumpautoload
+php artisan migrate:refresh --seed
+
+
+Iteración 37: Busqueda por genero
+creamos el codigo en la vista
+php artisan make:request BuscarGeneroRequest
+creamos el codigo en BusquedaController.php
+falta que solo muestre libros que cumplan con ese genero
+pero eso no presentara ningun problema
+
+Iteración 38: generar pdf con los pedidos
+cree la vista pedidos.blade.php dentro de reportes
+cree el metodo getPedidos en ReporteController.php
+
+
+Iteración 39: Agregando VueJS a las busquedas de libros
+modificamos los metodos get y post de BusquedaController
+creamos la vista busquedadinamica.blade.php
+tenemos que hacer la comparacion de string desde la vista
+pendiente ya me funciona el vuejs pero aun no terminado
+
+Iteración 40: Mejorando VueJS agregando y eliminando código
+Modimifamos el getIndex de LibroController.php
+Creamos un mostrar-libros2.blade.php
+Agregar código para que funcione con VueJS
+La parte de las busquedas
+culminado
+
+Iteración 41: Agregando Genero
+Primero debo corregir busquedadinamica4.blade.php
+para lograrlo primero se debe crear
+busquedadinamica5.blade.php
+listo corregido quitado todo el VueJS
+
+Iteración 42: Actualizando a laravel 5.2
+Modificando el auth.php de config es diferente pero ya corregido
+Modificando el ValidacionController.php que arroja error al iniciar sesión
+corregido el error era por no modificar los middleware
+
+Iteración 43: Importar/Exportar archivo excel
+En resources creamos la carpeta excel dentro el index-excel
+Creamos el controlador php artisan make:controller ExcelController
+lo agregamos a las routes.php
+
+Iteración 44: corregir error con desplegable bootstrap de cuenta no funciona
+corregido era agregar
+<!--si no se coloca lo de abajo da error -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
