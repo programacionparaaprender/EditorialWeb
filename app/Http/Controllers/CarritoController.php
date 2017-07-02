@@ -67,6 +67,7 @@ class CarritoController extends Controller {
 //	$imagen = $request->file('imagen');
 //        $ruta = '/img/';
         Cart::add(array('id' => $id, 'name' => $name, 'qty' => $qty, 'price' => $price));
+        
         return view('carrito.mostrar-carrito',['total'=>Cart::total()])->with('carrito',Cart::content());
     }
 //    public function show($id){}
