@@ -23,8 +23,9 @@ Route::controllers([
     'busqueda'=>'BusquedaController',
     'emails'=>'EmailController',
     'excel'=>'ExcelController',
-    '/' => 'BienvenidaController']);
+    'prueba' => 'PruebaController',
+    '/' => 'BienvenidaController'
+]);
 
 //Route::auth();
-//
-//Route::get('/home', 'HomeController@index');
+//Route::get('/prueba','PruebaController@index');
