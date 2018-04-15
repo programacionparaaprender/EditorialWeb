@@ -9,15 +9,15 @@
 
         <!-- para bootstrap en archivos blade dentro de carpetas en views -->
         @include('bootstrap')
-
+    <script src="{{url('./js/jquery-2.1.4.min.js')}}"></script>
 	<link rel="stylesheet" href="{{url('./css/bootstrap.min.css')}}">
-        <link rel="stylesheet" href="{{url('./css/bootstrap-theme.min.css')}}">
-        <script src="{{url('./js/bootstrap.min.js')}}"></script>
-        <script src="{{url('./js/jquery-2.2.3.min.js')}}"></script>
+    <link rel="stylesheet" href="{{url('./css/bootstrap-theme.min.css')}}">
+    <script src="{{url('./js/bootstrap.min.js')}}"></script>
 
-				<!--si no se coloca lo de abajo da error -->
-			  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-			  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<!--si no se coloca lo de abajo da error -->
+	<!-- 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 
 </head>
 <body>
@@ -132,7 +132,7 @@
 
      <!--Scripts-->
      @yield('scripts')
-     <script src={{url('./js/bootstrap.min.js')}}"></script>
+     <!-- <script src={{url('./js/bootstrap.min.js')}}"></script> -->
      <!--<script src="js/vue.js"></script>-->
 </body>
 </html>

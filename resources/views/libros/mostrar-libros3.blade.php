@@ -2,7 +2,7 @@
 @section('content')
 @if(Session::has('creada'))
 <div class="alert alert-success">
-	<p>{{Session::get('creada')}}</p>
+    <p>{{Session::get('creada')}}</p>
 </div>
 @endif
 <div class="container-fluid">
@@ -16,56 +16,57 @@
 </p>
 @endif
 @endif
-{!! $libros->render() !!}
+<!-- {!! $libros->render() !!} -->
     <form class="form-inline">
     <label>Buscar</label>
     <input v-model="searchText">
     </form>
     <div v-for="libro in libros | filterBy searchText in 'nombre'">
   
-        <libro-exp 
-            :id="libro.id" 
-            :nombre="libro.nombre" 
-            :descripcion="libro.descripcion" 
-            :precio="libro.precio" 
-            :ruta="libro.ruta"
-            :index="libro.index">
-        </libro-exp>
-
-    </div>
-</div>
-{!! $libros->render() !!}
-@endsection
-
-@section('scripts')
-        <script src="js/jquery-2.1.4.min.js"></script>
-        <script src="js/vue.js"></script>
-        <script type="text/template" id="libro_template">
         @{{ indices(index) }}
             <div  class="col-lg-3">
             <div class="thumbnail">
-            <img src="@{{ ruta }}" width="150px" height="150px">
+            <img src="@{{ libro.ruta }}" width="150px" height="150px">
             <div class="caption">
-                <h3>@{{ nombre }}</h3> 
-                <h4>@{{ descripcion }}</h4>
+                <h3>@{{ libro.nombre }}</h3> 
+                <h4>@{{ libro.descripcion }}</h4>
             </div>
             <form action="{{ url('carrito/') }}" method="POST"  class="form-horizontal">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}" required>
-                <input type="hidden" name="id" value="@{{ id }}" required>
-                <input type="hidden" name="name" value="@{{ nombre }}" required>
-                <input type="hidden" name="price" value="@{{ precio }}" required>
+                <input type="hidden" name="id" value="@{{ libro.id }}" required>
+                <input type="hidden" name="name" value="@{{ libro.nombre }}" required>
+                <input type="hidden" name="price" value="@{{ libro.precio }}" required>
                 <label>Cantidad</label>
                 <input type="text" name="qty" value="0" size="5">
                 <input class="btn btn-success" role="button" type="submit" value="Comprar"/>
             </form>
-            <p><a href="libros/actualizar/@{{ id }}" class="btn btn-primary" role="button">Editar libro</a></p>
-            <form action="carrito/destruir/@{{ id }}" method="GET">
+            <p><a href="libros/actualizar/@{{ libro.id }}" class="btn btn-primary" role="button">Editar libro</a></p>
+            <form action="carrito/destruir/@{{ libro.id }}" method="GET">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}" required>
                 <input class="btn btn-danger" role="button" type="submit" value="Eliminar"/>
             </form>
             </div>
             </div>
         @{{ indices2(index) }}
+
+ <!--        <libro-exp 
+            :id="libro.id" 
+            :nombre="libro.nombre" 
+            :descripcion="libro.descripcion" 
+            :precio="libro.precio" 
+            :ruta="libro.ruta"
+            :index="libro.index">
+        </libro-exp> -->
+
+    </div>
+</div>
+<!-- {!! $libros->render() !!} -->
+@endsection
+
+@section('scripts')
+        <!-- <script src="js/jquery-2.1.4.min.js"></script> -->
+        <script src="js/vue.js"></script>
+        <script type="text/template" id="libro_template">
         </script>
         <script type="text/javascript">
             Vue.component('libro-exp',{
@@ -101,7 +102,6 @@
                 },
                 filters: {
                     indices: function (index) {
-                        console.log(index);
                       if (index % 4 == 0) return '<div class="row">'
                     },
                     indices2: function (index) {

@@ -23,17 +23,17 @@
         <div class="row">
 	@endif
 	<div class="col-sm-6 col-md-3">
-            <div class="thumbnail">
-                <img src="{{$foto->ruta}}">
-		<div class="caption">
-                    <h3>{{$foto->nombre}}</h3>
-		    <p>{{$foto->descripcion}}</p>
-                </div>
-                <label class="col-md-4 control-label">Costo Bsf {{ $foto->precio }} </label>
-                <p></p>
-                @if (Auth::guest())
+        <div class="thumbnail">
+            <img src="{{$foto->ruta}}">
+		    <div class="caption">
+                <h3>{{$foto->nombre}}</h3>
+                <p>{{$foto->descripcion}}</p>
+            </div>
+            <label class="col-md-4 control-label">Costo Bsf {{ $foto->precio }} </label>
+            <p></p>
+            @if (Auth::guest())
                 <p>--</p>
-                @elseif(Auth::user()->admin<3)            
+            @elseif(Auth::user()->admin<3)            
                 <form action="{{ url('carrito/') }}" method="POST">
                         <label class="col-md-4 control-label">Cantidad</label>
                         <input type="text" class="form-control" name="qty" value="0">
@@ -52,11 +52,11 @@
                 </form>
                 @endif
                 @endif
-            </div>
         </div>
-        @if(($index+1)%4 == 0)
+    </div>
+    @if(($index+1)%4 == 0)
 	</div>
-        @endif
+    @endif
     @endforeach
     
 @else
