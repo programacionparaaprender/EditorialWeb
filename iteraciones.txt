@@ -308,4 +308,19 @@ $ git checkout master
 $ git merge luis
 para fucionar luego las ramas
 
+----------------------
+Iteración 46: Falla con indices al mostrar libros
+------------------------
+Probando varias formas
+1.
+@{{ (index % 4 == 0) ? <div class="row"> : '' }}
+2.
+@{{#if (index % 4 == 0) }}
+    @{{ index % 4 == 0}}
+@{{/if}}
+3. Logrado con filtros aun con fallas
+@{{ index | indices }}
+4. usando metodos pero aun con error
+@{{ indices2(index) }}
+
   

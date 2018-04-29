@@ -12,7 +12,7 @@ use Carbon\Carbon;
 class LibroController extends Controller {
     public function getIndex(){
         $libros = Libro::paginate();
-        return view('libros.mostrar-libros2',['libros'=>$libros]);
+        return view('libros.mostrar-libros3',['libros'=>$libros]);
     }
     public function getCreate(){ return view('libros.crear-libro'); }
     public function postCreate(CrearLibroRequest $request){//store(CrearLibroRequest $request){
