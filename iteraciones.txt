@@ -302,3 +302,10 @@ corregido era agregar
 <!--si no se coloca lo de abajo da error -->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+Iteración 45: Modificar blade.php para que sean php
+$ git checkout master
+$ git merge luis
+para fucionar luego las ramas
+
+  
