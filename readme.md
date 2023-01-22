@@ -1,3 +1,15 @@
+
+### curso
+https://www.udemy.com/course/sonarqube/
+
+### comandos sonarqube luego de crear proyecto y asignarle el proyectkey
+
+https://docs.sonarqube.org/latest/analyzing-source-code/scanners/sonarscanner/
+sonar-scanner -Dsonar.host.url=http://localhost:9000 -Dsonar.login=admin -Dsonar.password=admin -Dsonar.projectName=EditorialWeb -Dsonar.projectKey=EditorialWebID -Dsonar.projectVersion=1.0 -Dsonar.sources=.
+
+### comando empleando token
+sonar-scanner -Dsonar.login=1dafde238dbde9821ab0fbc409e56008401b7fb0
+
 # Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
